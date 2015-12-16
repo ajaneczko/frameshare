@@ -8,5 +8,11 @@ angular.module('syfApp')
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardCtrl',
         authenticate: true
+      })
+      .state('dashboard-new-project', {
+        url: '/dashboard/new-project',
+        templateUrl: 'app/dashboard/create_project/create_project.html',
+        controller: 'CreateProjectCtrl',
+        authenticate: true
       });
   });

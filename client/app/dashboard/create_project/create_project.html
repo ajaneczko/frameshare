@@ -1,0 +1,39 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Create project</h1>
+    </div>
+    <div class="col-sm-6">
+      <form class="form" name="form" ng-submit="register(form)" novalidate>
+
+        <div class="form-group">
+          <label>Name</label>
+
+          <input type="text" name="name" class="form-control" ng-model=""
+                 required/>
+        </div>
+
+        <div class="form-group" >
+          <label>Description</label>
+          <input type="email" name="email" class="form-control" ng-model="">
+        </div>
+
+
+
+        <div>
+          <button class="btn btn-inverse btn-lg btn-login" type="submit">
+            Add project
+          </button>
+          <a class="btn btn-default btn-lg btn-register" href="/login">
+            Nevermind
+          </a>
+        </div>
+
+        <hr>
+
+      </form>
+    </div>
+  </div>
+  <hr>
+</div>
