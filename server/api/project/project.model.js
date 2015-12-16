@@ -5,7 +5,14 @@ var mongoose = require('mongoose'),
 
 var ProjectSchema = new Schema({
   name: String,
-  info: String,
+  description: String,
+  updated_at: {type:Date},
+  prototype_version: [{
+    created_at: {type: Date},
+    name: String,
+    url: String,
+    description: String,
+  }],
   active: Boolean
 });
 
