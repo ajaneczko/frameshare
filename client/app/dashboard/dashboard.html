@@ -12,7 +12,21 @@
   <div class="row">
     <div class="col-md-12">
         <button type="button" class="btn btn-default" ><a href="/dashboard/new-project"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></button>
-
     </div>
   </div>
 </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Projects</h2>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="project in awesomeProjects">
+          <strong>{{project.name}}</strong></a>
+          <span class="text-muted">{{project.description}}</span>
+          <a class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
+        </li>
+      </ul>
+      </div>
+  </div>
+ </div>

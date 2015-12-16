@@ -7,6 +7,29 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Project = require('../api/project/project.model');
+
+Project.find({}).remove(function() {
+  Project.create({
+    name : 'Broadsheet',
+    description : 'Integration with popular tools such as Bower, Grunt, Karma, Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, Stylus, Sass, CoffeeScript, and Less.'
+  }, {
+    name : 'Bungalow',
+    description : 'Built with a powerful and fun stack: MongoDB, Express, AngularJS, and Node.'
+  }, {
+    name : 'SmartCity',
+    description : 'Build system ignores `spec` files, allowing you to keep tests alongside code. Automatic injection of scripts and styles into your index.html'
+  },  {
+    name : 'Popps',
+    description : 'Best practice client and server structures allow for more code reusability and maximum scalability'
+  },  {
+    name : 'SYF',
+    description : 'Build process packs up your templates as a single JavaScript payload, minifies your scripts/css/images, and rewrites asset names for caching.'
+  },{
+    name : 'SpaceTravel',
+    description : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
+  });
+});
 
 Thing.find({}).remove(function() {
   Thing.create({

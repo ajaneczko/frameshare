@@ -2,10 +2,10 @@
 
 angular.module('syfApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+    // $scope.menu = [{
+    //  'title': '',
+    //  'link': '/'
+    // }];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

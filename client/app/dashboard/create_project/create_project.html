@@ -5,27 +5,26 @@
       <h1>Create project</h1>
     </div>
     <div class="col-sm-6">
-      <form class="form" name="form" ng-submit="register(form)" novalidate>
+      <form class="form" name="form">
 
         <div class="form-group">
           <label>Name</label>
 
-          <input type="text" name="name" class="form-control" ng-model=""
-                 required/>
+          <input type="text" name="name" class="form-control" ng-model="projectName">
         </div>
 
         <div class="form-group" >
           <label>Description</label>
-          <input type="email" name="email" class="form-control" ng-model="">
+          <input type="text" name="email"  class="form-control" ng-model="projectDescription">
         </div>
 
 
 
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
+          <button class="btn btn-inverse btn-lg btn-login" type="submit" ng-click="addProject()">
             Add project
           </button>
-          <a class="btn btn-default btn-lg btn-register" href="/login">
+          <a class="btn btn-default btn-lg btn-register" href="/dashboard">
             Nevermind
           </a>
         </div>
