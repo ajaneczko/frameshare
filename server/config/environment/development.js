@@ -5,7 +5,8 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/syf-dev'
+    uri: process.env.MONGO_URL ||
+        'mongodb://localhost/syf-dev'
   },
 
   seedDB: true
