@@ -3,7 +3,7 @@
 <div ui-view>
   <div class="container">
     <div class="jumbotron">
-      <h1>SYF Dashboard</h1>
+      <h1>FramerJS pro</h1>
       <p>...</p>
       <p><a class="btn btn-primary btn-lg" href="/dashboard/new-project" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></p>
     </div>
@@ -17,17 +17,17 @@
           <div class="panel panel-default" ng-repeat="project in awesomeProjects">
             <div class="panel-heading">
               <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
-              <div class="main-actions pull-right">
+              <div ng-show="isLoggedIn()" class="main-actions pull-right">
                 <a class="edit" tooltip="Edit project"> Edit</a>
               </div>
             </div>
             <div class="panel-body">
-              <p><add-version data-project="project"></add-version></p>
+              <p><add-version ng-show="isLoggedIn()" data-project="project"></add-version></p>
                 {{project.description}}
                 {{project.updated_at | date:'short'}}
             <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
-                <div class="pull-right">
+                <div ng-show="isLoggedIn()" class="pull-right">
                   <a class="prototype-verstion-item-open-prototype" tooltip="Edit project"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open prototype</a>
                 </div>
                 <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>

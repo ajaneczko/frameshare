@@ -6,8 +6,7 @@ angular.module('syfApp')
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'app/dashboard/dashboard.html',
-        controller: 'DashboardCtrl',
-        authenticate: true
+        controller: 'DashboardCtrl'
       })
       .state('dashboard-new-project', {
         url: '/dashboard/new-project',
@@ -18,7 +17,6 @@ angular.module('syfApp')
       .state('dashboard.project', {
         url: '/project/:slug',
         templateUrl: 'app/dashboard/project/project.html',
-        controller: 'ProjectCtrl',
-        authenticate: true
+        controller: 'ProjectCtrl'
       });
   });
