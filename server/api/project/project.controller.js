@@ -27,6 +27,9 @@ exports.show = function(req, res) {
 
 // Creates a new project in the DB.
 exports.create = function(req, res) {
+  var data = req.body;
+  data.author = req.user._id;
+  
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.json(201, project);
