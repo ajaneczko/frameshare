@@ -24,7 +24,7 @@
             <div class="panel-body">
               <p><add-version data-project="project"></add-version></p>
                 {{project.description}}
-                {{project.created_at | date:'short'}}
+                {{project.updated_at | date:'short'}}
             <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
                 <div class="pull-right">
