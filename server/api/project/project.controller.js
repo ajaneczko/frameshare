@@ -5,7 +5,12 @@ var Project = require('./project.model');
 
 // Get list of projects
 exports.index = function(req, res) {
-  Project.find(function (err, projects) {
+  var criteria = {}
+  if (req.query.slug) {
+    criteria.slug = req.query.slug;
+  }
+
+  Project.find(criteria, function (err, projects) {
     if(err) { return handleError(res, err); }
     return res.json(200, projects);
   });

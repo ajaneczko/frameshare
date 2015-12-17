@@ -1,10 +1,12 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    slug = require('slug');
 
 var ProjectSchema = new Schema({
   name: String,
+  slug: String,
   description: String,
   updated_at: {type:Date},
   prototype_version: [{
@@ -20,6 +22,7 @@ module.exports = mongoose.model('Project', ProjectSchema);
 
 ProjectSchema.pre('save', function(done) {
   this.updated_at = new Date();
+  this.slug = slug(this.name).toLowerCase();
 
   this.prototype_version.forEach (function (prototype_version){
     if ( !prototype_version.created_at ) {

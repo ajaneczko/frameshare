@@ -16,7 +16,7 @@ angular.module('syfApp')
         authenticate: true
       })
       .state('dashboard.project', {
-        url: '/project/:id',
+        url: '/project/:slug',
         templateUrl: 'app/dashboard/project/project.html',
         controller: 'ProjectCtrl',
         authenticate: true

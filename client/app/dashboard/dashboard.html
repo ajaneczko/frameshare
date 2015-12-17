@@ -16,7 +16,7 @@
         <h2>Projects</h2>
           <div class="panel panel-default" ng-repeat="project in awesomeProjects">
             <div class="panel-heading">
-              <a ui-sref="dashboard.project({ id: project._id })" class="panel-title">{{project.name}} </a>
+              <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
               <div class="main-actions pull-right">
                 <a class="edit" tooltip="Edit project"> Edit</a>
               </div>
