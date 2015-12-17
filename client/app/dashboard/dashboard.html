@@ -27,8 +27,12 @@
                 {{project.updated_at | date:'short'}}
             <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
+
                 <div ng-show="isLoggedIn()" class="pull-right">
-                  <a class="prototype-verstion-item-open-prototype" tooltip="Edit project"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open prototype</a>
+                  <a ng-href="{{version.url}}" class="prototype-verstion-item-open-prototype" tooltip="Open prototype">
+                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                    Open prototype
+                  </a>
                 </div>
                 <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
                 <p class="prototype-version-item-name">{{version.name}}</p>
