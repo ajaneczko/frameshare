@@ -1,32 +1,44 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>SYF Dashboard</h1>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-lg" href="/dashboard/new-project" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></p>
+  </div>
+</div>
+<br>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      SYF Dashboard view
-    </div>
-  </div>
-</div>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-        <button type="button" class="btn btn-default" ><a href="/dashboard/new-project"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></button>
-    </div>
-  </div>
-</div>
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
       <h2>Projects</h2>
-      <ul class="list-group">
-        <li class="list-group-item" ng-repeat="project in awesomeProjects">
-          <strong>{{project.name}}</strong></a>
-          <span class="text-muted">{{project.description}}</span>
-          <a class="trash"><span class="glyphicon glyphicon-trash pull-right"></span></a>
-        </li>
-      </ul>
+
+
+
+      <div class="panel panel-default" ng-repeat="project in awesomeProjects">
+        <div class="panel-heading">
+
+            <span class="panel-title">{{project.name}} </span>
+          <div class="main-actions pull-right">
+            <a class="edit" tooltip="Edit project"> Edit</a>
+          </div>
+        </div>
+        <div class="panel-body">
+          <p><add-version data-project="project"></add-version></p>
+            {{project.description}}
+          Panel content
+          <ul>
+            <li ng-repeat="version in project.prototype_version">
+              <p>{{version.name}}</p>
+              <p>{{version.description}}</p>
+              <p>{{version.url}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
       </div>
   </div>
  </div>

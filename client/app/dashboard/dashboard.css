@@ -1,0 +1,9 @@
+.edit {
+  color: #CC6363;
+}
+
+.edit:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #D29696;
+}

@@ -1,0 +1,6 @@
+<input ng-show="custom" placeholder="New version title" ng-model="versionName"></input>
+<input ng-show="custom" placeholder="New version description" ng-model="versionDescription"></input>
+<input ng-show="custom" placeholder="New version URL" ng-model="versionUrl"></input>
+<a class="save-version" ng-show="custom" ng-click="toggleCustom(); addVersion()" tooltip="Save new version of prototype"> Add</a>
+<a class="new-version"  ng-show="!custom" ng-click="toggleCustom()" tooltip="Add new version of prototype"> + New version</a>
+

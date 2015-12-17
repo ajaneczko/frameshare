@@ -34,7 +34,7 @@ exports.update = function(req, res) {
   Project.findById(req.params.id, function (err, project) {
     if (err) { return handleError(res, err); }
     if(!project) { return res.send(404); }
-    var updated = _.merge(project, req.body);
+    var updated = _.extend(project, req.body);
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
       return res.json(200, project);
