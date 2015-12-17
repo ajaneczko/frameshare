@@ -7,3 +7,65 @@
   text-decoration: none;
   color: #D29696;
 }
+
+.prototype-versions-panel {
+  margin-top: 0px;
+}
+
+.prototype-versions-panel::before {
+  content: "•";
+  position: relative;
+  left: -4.7px;
+  top: 16.5px;
+  color: #AAD2AA;
+  font-size: 30px;
+
+}
+
+.prototype-version-item {
+  border-top: 0 !important;
+  border-right: 0 !important;
+  border-left: 1px Solid #AAD2AA !important;
+  border-bottom: 0 !important;
+  border-radius: 0px !important;
+}
+
+.prototype-version-item p {
+  padding: 0px !important;
+  margin: 5px !important;
+}
+
+.prototype-verstion-item-open-prototype {
+  color: #428bca;
+  padding: 5px;
+  border-radius: 2px;
+  border:1px Solid #428bca;
+  background-color: white;
+}
+
+.prototype-verstion-item-open-prototype:hover {
+  text-decoration: none;
+  background-color: white;
+}
+
+.prototype-version-item:hover {
+  background-color: rgba(170, 210, 170, 0.26)
+}
+
+.prototype-version-item-timestamp {
+  color: gray;
+  font-size: 80%;
+}
+
+.prototype-version-item-name {
+  color: "black";
+  font-size: 120%;
+}
+
+.prototype-version-item-description {
+
+}
+
+.prototype-version-item-url {
+
+}
