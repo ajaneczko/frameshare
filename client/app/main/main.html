@@ -4,33 +4,16 @@
   <div class="container">
     <h1>SHARE YOUR FRAMER</h1>
     <p class="lead">Keep track on your FramerJS prototypes</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+    <img src="http://framermeetup.com/static/images/1024.png" alt="I'm Yeoman">
   </div>
   <br>
-  <div class="container hero-unit-list-projects" ng-show="isLoggedIn()">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>Projects:</h3>
-        <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="project in awesomeProjects">
-          <li><a href="/dashboard" tooltip="{{project.info}}">{{project.name}}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="container syf-main-add-project" ng-show="!isLoggedIn()">
+  <div class="container syf-main-add-project">
     <div class="row">
       <div id="syf-main-add-project" class="col-md-2 col-md-offset-5">
         <button type="button" class="btn btn-default" ><a href="/dashboard/new-project"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></button>
       </div>
     </div>
   </div>
-  <br>
-  <footer class="footer">
-    <div class="container">
-      <p>Syf v0.0.1 </p>
-    </div>
-  </footer>
 </header>
 
 
