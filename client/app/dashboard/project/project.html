@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <span class="panel-title">{{project.name}} </span>
+                    <div class="main-actions pull-right">
+                        <a class="edit" tooltip="Edit project"> Edit</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    {{project.description}}
+
+                    <div ng-repeat="version in project.prototype_version | orderBy:'-created_at' | limitTo: 1">
+                        <p class="prototype-version-item-name">{{version.name}}</p>
+                        <p class="prototype-version-item-description">{{version.description}}</p>
+                        <p class="prototype-version-item-timestamp">{{version.created_at | date:'short'}}</p>
+
+                        <a ng-href="{{ version.url }}">
+                            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

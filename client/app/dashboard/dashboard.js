@@ -14,5 +14,11 @@ angular.module('syfApp')
         templateUrl: 'app/dashboard/create_project/create_project.html',
         controller: 'CreateProjectCtrl',
         authenticate: true
+      })
+      .state('dashboard.project', {
+        url: '/project/:id',
+        templateUrl: 'app/dashboard/project/project.html',
+        controller: 'ProjectCtrl',
+        authenticate: true
       });
   });
