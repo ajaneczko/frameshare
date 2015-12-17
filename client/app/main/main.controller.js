@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('syfApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket, Auth, $location) {
     $scope.awesomeThings = [];
 
     $http.get('/api/projects').success(function(awesomeProjects) {
@@ -9,7 +9,10 @@ angular.module('syfApp')
       socket.syncUpdates('projects', $scope.awesomeProjects);
     });
 
-
+    $scope.isLoggedIn = Auth.isLoggedIn;
+    $scope.isActive = function(route) {
+      return route === $location.path();
+    };
 
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');

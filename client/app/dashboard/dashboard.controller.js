@@ -7,6 +7,6 @@ angular.module('syfApp')
       $scope.awesomeProjects = awesomeProjects;
       console.log($scope.awesomeProjects)
       socket.syncUpdates('project', $scope.awesomeProjects);
-
     });
+
   });
