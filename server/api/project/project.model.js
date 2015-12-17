@@ -8,6 +8,7 @@ var ProjectSchema = new Schema({
   name: String,
   slug: String,
   description: String,
+  author: { type: Schema.Types.ObjectId, ref: 'User' },
   updated_at: {type:Date},
   prototype_version: [{
     created_at: {type: Date},
