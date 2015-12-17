@@ -17,3 +17,14 @@ var ProjectSchema = new Schema({
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
+
+ProjectSchema.pre('save', function(done) {
+  this.updated_at = new Date();
+
+  this.prototype_version.forEach (function (prototype_version){
+    if ( !prototype_version.created_at ) {
+      prototype_version.created_at = new Date();
+    }
+  });
+  done();
+});
