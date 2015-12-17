@@ -25,21 +25,20 @@
               <p><add-version data-project="project"></add-version></p>
                 {{project.description}}
                 {{project.created_at | date:'short'}}
-
-              <ul class="list-group prototype-versions-panel">
-                <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
-                  <div class="pull-right">
-                    <a class="prototype-verstion-item-open-prototype" tooltip="Edit project"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open prototype</a>
-                  </div>
-                  <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
-                  <p class="prototype-version-item-name">{{version.name}}</p>
-                  <p class="prototype-version-item-description">{{version.description}}</p>
-                  <p class="prototype-version-item-url"><code>{{version.url}}</code></p>
-                </li>
-              </ul>
-            </div>
+            <ul class="list-group prototype-versions-panel">
+              <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
+                <div class="pull-right">
+                  <a class="prototype-verstion-item-open-prototype" tooltip="Edit project"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open prototype</a>
+                </div>
+                <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
+                <p class="prototype-version-item-name">{{version.name}}</p>
+                <p class="prototype-version-item-description">{{version.description}}</p>
+                <p class="prototype-version-item-url"><code>{{version.url}}</code></p>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
     </div>
-   </div>
+  </div>
 </div>
