@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('syfApp')
-  .controller('CreateProjectCtrl', function ($scope, $http) {
+  .controller('CreateProjectCtrl', function ($scope, $state, Project) {
 
     $scope.projectName = ''
     $scope.projectDescription = ''
@@ -11,7 +11,12 @@ angular.module('syfApp')
       return;
       }
 
-      $http.post('/api/projects', { name: $scope.projectName, description: $scope.projectDescription });
+      Project
+          .save({ name: $scope.projectName, description: $scope.projectDescription })
+          .$promise
+          .then(function () {
+            $state.go('dashboard')
+          })
       $scope.projectName = '';
     };
 
