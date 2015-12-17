@@ -6,6 +6,7 @@ angular.module('syfApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
+  'angularMoment',
   'ui.bootstrap'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
