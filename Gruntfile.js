@@ -379,7 +379,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'heroku',
+          remote: process.env.HEROKU_REMOTE || 'heroku',
           branch: 'master'
         }
       },

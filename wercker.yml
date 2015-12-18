@@ -3,11 +3,42 @@ no-response-timeout: 15
 command-timeout: 30
 build:
   steps:
-    - npm-install
-
+    - script:
+        name: build app
+        code: |
+          node -v
 deploy:
   steps:
-    - heroku-deploy:
-      key: $HEROKU_KEY
-      user: $HEROKU_USER
-      app-name: $HEROKU_APP_NAME
+    - script:
+        name: install required cli
+        code: |
+          npm install grunt-cli bower
+
+    - npm-install
+
+    - script:
+        name: bower install
+        code: |
+          ./node_modules/.bin/bower install --allow-root
+
+    - script:
+        name: setup identity
+        code: |
+          git config --global user.email "bot@wercker.com"
+          git config --global user.name "Wercker Bot"
+
+    - add-to-known_hosts:
+        hostname: heroku.com
+
+    - add-ssh-key:
+        keyname: HEROKU_KEY
+
+    - script:
+        name: build app
+        code: |
+          ./node_modules/.bin/grunt build
+
+    - script:
+        name: deploy
+        code: |
+          pwd && git remote -v && ./node_modules/.bin/grunt buildcontrol:heroku
