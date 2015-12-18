@@ -1,0 +1,13 @@
+box: node:0.12
+no-response-timeout: 15
+command-timeout: 30
+build:
+  steps:
+    - npm-install
+
+deploy:
+  steps:
+    - heroku-deploy:
+      key: $HEROKU_KEY
+      user: $HEROKU_USER
+      app-name: $HEROKU_APP_NAME
