@@ -10,26 +10,32 @@ exports.index = function(req, res) {
     criteria.slug = req.query.slug;
   }
 
-  Project.find(criteria, function (err, projects) {
-    if(err) { return handleError(res, err); }
-    return res.json(200, projects);
-  });
+  Project
+      .find(criteria)
+      .populate('author')
+      .exec(function (err, projects) {
+        if(err) { return handleError(res, err); }
+        return res.json(200, projects);
+      });
 };
 
 // Get a single project
 exports.show = function(req, res) {
-  Project.findById(req.params.id, function (err, project) {
-    if(err) { return handleError(res, err); }
-    if(!project) { return res.send(404); }
-    return res.json(project);
-  });
+  Project
+      .findById(req.params.id)
+      .populate('author')
+      .exec(function (err, project) {
+        if(err) { return handleError(res, err); }
+        if(!project) { return res.send(404); }
+        return res.json(project);
+      });
 };
 
 // Creates a new project in the DB.
 exports.create = function(req, res) {
   var data = req.body;
   data.author = req.user._id;
-  
+
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.json(201, project);

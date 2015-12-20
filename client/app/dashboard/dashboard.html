@@ -17,6 +17,7 @@
           <div class="panel panel-default" ng-repeat="project in awesomeProjects">
             <div class="panel-heading">
               <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
+              <small ng-if="project.author">created by {{project.author.name}}</small>
               <div ng-show="isLoggedIn()" class="main-actions pull-right">
                 <a class="edit" tooltip="Edit project"> Edit</a>
               </div>

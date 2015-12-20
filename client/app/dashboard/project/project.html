@@ -5,6 +5,7 @@
                 <div class="panel-heading">
 
                     <span class="panel-title">{{project.name}} </span>
+                    <small ng-if="project.author">created by {{project.author.name}} </small>
                     <div class="main-actions pull-right">
                         <a class="edit" tooltip="Edit project"> Edit</a>
                     </div>
