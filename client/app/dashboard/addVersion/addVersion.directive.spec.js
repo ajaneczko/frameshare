@@ -16,6 +16,6 @@ describe('Directive: addVersion', function () {
     element = angular.element('<add-version></add-version>');
     element = $compile(element)(scope);
     scope.$apply();
-    expect(element.text()).toBe('this is the addVersion directive');
+    expect(element.text()).toContain('New version');
   }));
 });

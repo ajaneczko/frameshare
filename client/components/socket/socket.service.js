@@ -3,7 +3,13 @@
 
 angular.module('syfApp')
   .factory('socket', function(socketFactory) {
-
+    if (typeof io == "undefined") {
+      return {
+        socker: null,
+        syncUpdates: function () {},
+        unsyncUpdates: function () {}
+      }
+    }
     // socket.io now auto-configures its connection when we ommit a connection url
     var ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above

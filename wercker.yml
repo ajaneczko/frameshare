@@ -2,8 +2,22 @@ box: node:0.12
 no-response-timeout: 15
 command-timeout: 30
 build:
+  services:
+    - mongo
   steps:
     - npm-install
+    
+    - script:
+        name: install required cli
+        code: |
+          npm install bower
+
+    - script:
+        name: bower install
+        code: |
+          ./node_modules/.bin/bower install --allow-root
+
+    - npm-test
 
 deploy:
   steps:

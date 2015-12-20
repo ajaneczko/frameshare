@@ -6,13 +6,13 @@ describe('Service: project', function () {
   beforeEach(module('syfApp'));
 
   // instantiate service
-  var project;
-  beforeEach(inject(function (_project_) {
-    project = _project_;
+  var Project;
+  beforeEach(inject(function (_Project_) {
+    Project = _Project_;
   }));
 
   it('should do something', function () {
-    expect(!!project).toBe(true);
+    expect(!!Project).toBe(true);
   });
 
 });
