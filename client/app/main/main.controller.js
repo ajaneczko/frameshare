@@ -2,12 +2,7 @@
 
 angular.module('syfApp')
   .controller('MainCtrl', function ($scope, $http, socket, Auth, $location) {
-    $scope.awesomeThings = [];
-
-    $http.get('/api/projects').success(function(awesomeProjects) {
-      $scope.awesomeProjects = awesomeProjects;
-      socket.syncUpdates('projects', $scope.awesomeProjects);
-    });
+    $scope.projects = ''
 
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isActive = function(route) {

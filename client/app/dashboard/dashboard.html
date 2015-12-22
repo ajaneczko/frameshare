@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Projects</h2>
+        <h3>Projects</h3>
           <div class="panel panel-default" ng-repeat="project in awesomeProjects">
             <div class="panel-heading">
               <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
@@ -23,10 +23,11 @@
               </div>
             </div>
             <div class="panel-body">
+
+              <p>{{project.description}}</p>
               <p><add-version ng-show="isLoggedIn()" data-project="project"></add-version></p>
-                {{project.description}}
-                {{project.updated_at | date:'short'}}
-            <ul class="list-group prototype-versions-panel">
+
+              <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
 
                 <div ng-show="isLoggedIn()" class="pull-right">
