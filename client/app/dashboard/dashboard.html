@@ -19,7 +19,6 @@
         <div class="panel panel-default" ng-repeat="project in personalProjects">
 
           <div class="panel-heading">
-            {{personalProjects.length}}
             <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a> <span class="badge" ng-show="project.isPublic">Public</span><span class="badge" ng-show="!project.isPublic">Private</span>
             <small ng-if="project.author">created by {{project.author.name}}</small>
             <div class="main-actions pull-right">
