@@ -5,6 +5,11 @@ angular.module('syfApp')
 
     $scope.projectName = ''
     $scope.projectDescription = ''
+    $scope.isProjectPublic = true;
+
+    $scope.onSwitch = function (isProjectPublic) {
+      $scope.isProjectPublic != $scope.isProjectPublic;
+    }
 
     $scope.addProject = function() {
       if($scope.projectName === '') {
@@ -12,12 +17,13 @@ angular.module('syfApp')
       }
 
       Project
-          .save({ name: $scope.projectName, description: $scope.projectDescription })
+          .save({ name: $scope.projectName, description: $scope.projectDescription, isPublic: $scope.isProjectPublic  })
           .$promise
           .then(function () {
             $state.go('dashboard')
           })
       $scope.projectName = '';
+
     };
 
   });
