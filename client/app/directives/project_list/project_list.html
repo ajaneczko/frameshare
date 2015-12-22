@@ -1,42 +1,31 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Public projects</h2>
-      <div class="panel panel-default" ng-repeat="project in projects" ng-show="project.isPublic">
-
-          <div class="panel-heading">
-            <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a> <span class="badge" ng-show="project.isPublic">Public</span><span class="badge" ng-show="!project.isPublic">Private</span>
-            <small ng-if="project.author">created by {{project.author.name}}</small>
-            <div ng-show="isLoggedIn()" class="main-actions pull-right">
-              <a class="edit" tooltip="Edit project"> Edit</a>
-            </div>
-          </div>
-          <div class="panel-body">
-
-            <p>{{project.description}}</p>
-            <p><add-version ng-show="isLoggedIn()" data-project="project"></add-version></p>
-
-            <ul class="list-group prototype-versions-panel">
-              <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
-
-                <div ng-show="isLoggedIn()" class="pull-right">
-                  <a ng-href="{{version.url}}" class="prototype-verstion-item-open-prototype" tooltip="Open prototype">
-                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-                    Open prototype
-                  </a>
-                </div>
-                <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
-                <p class="prototype-version-item-name">{{version.name}}</p>
-                <p class="prototype-version-item-description">{{version.description}}</p>
-                <p class="prototype-version-item-url"><code>{{version.url}}</code></p>
-              </li>
-            </ul>
-          </div>
-
+<div id="frameshare-project-list" class="col-md-12">
+  <div class="panel panel-default" ng-repeat="project in projects" ng-show="project.isPublic">
+      <div class="panel-heading">
+        <a class="framshare-project-title" ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
+        <small ng-if="project.author">created by {{project.author.name}}</small>
+        <p class="frameshare-project-description">{{project.description}}</p>
+        <div ng-show="isLoggedIn()" class="main-actions pull-right">
+          <a class="edit" tooltip="Edit project"> Edit</a>
+        </div>
       </div>
-    </div>
+      <div class="panel-body">
+
+        <p><add-version ng-show="isLoggedIn()" data-project="project"></add-version></p>
+        <ul class="list-group prototype-versions-panel">
+          <li class="list-group-item frameshare-project-list-proto-version" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
+            <div ng-show="isLoggedIn()" class="pull-right">
+              <a ng-href="{{version.url}}" class="prototype-verstion-item-open-prototype" tooltip="Open prototype">
+                <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                Open prototype
+              </a>
+            </div>
+            <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
+            <p class="prototype-version-item-name">{{version.name}}</p>
+            <p class="prototype-version-item-url framshare-project-list-url"><a>{{version.url}}</a></p>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
-
 

@@ -1,0 +1,39 @@
+.framshare-project-title {
+  font-size: 1.5em;
+  color: #4E94E1;
+  text-decoration: none;
+  margin: 0px 0px 0px 0px;
+}
+
+.frameshare-project-description {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #555;
+  font-weight: 400;
+}
+
+.frameshare-project-list-proto-version {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 2px Solid #569ADF !important;
+    border-bottom: 0 !important;
+    border-radius: 0px !important;
+}
+
+.frameshare-project-list-proto-version:hover {
+  background-color: rgba(185, 192, 199, 0.1);
+}
+
+.framshare-project-list-url a  {
+    text-decoration: none;
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #569ADF;
+    white-space: nowrap;
+    background-color: rgba(185, 192, 199, 0.27);
+    border-radius: 4px;
+}
+
+.framshare-project-list-url a:hover {
+  cursor: pointer;
+}
