@@ -5,7 +5,7 @@
 
 
 #banner {
-  background-image: url("/../assets/images/MainViewBackground.png");
+  background-image: url("/assets/images/MainViewBackground.png");
   border-bottom: none;
   margin-top: -20px;
   height: 350px;
