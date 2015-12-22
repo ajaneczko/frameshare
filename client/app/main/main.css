@@ -5,9 +5,10 @@
 
 
 #banner {
+  background-image: url("/../assets/images/MainViewBackground.png");
   border-bottom: none;
   margin-top: -20px;
-  height:100vh;
+  height: 350px;
 }
 
 #banner h1 {
@@ -18,8 +19,8 @@
 
 .hero-unit {
   position: relative;
-  padding: 150px 15px;
-  color: black;
+  padding: 129px 15px;
+  color: white;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: white;
@@ -39,6 +40,53 @@
   color: white;
   text-decoration: none;
 }
+
+/* ============================================================
+  FRAMESHARE CREATE PROJECT
+============================================================ */
+
+#frameshare-create-project {
+  width:70%;
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+
+.create-project-input button {
+   padding: 10px;
+    border: solid 5px #137CB8;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s;
+    border-radius: 0px;
+    width: 200px;
+    background-color: #137CB8;
+    color: white;
+    text-transform: uppercase;
+}
+
+.create-project-input button:focus, .create-project-input button.focus {
+    border: solid 5px #137CB8;
+    background-color: #137CB8;
+    color: white;
+}
+
+.create-project-input input[type="text"] {
+  padding: 20px;
+  border: solid 5px #137CB8;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+  border-radius: 0px;
+  width: 100%;
+  text-transform: uppercase;
+}
+.create-project-input input[type="text"]:focus, .create-project-input input[type="text"].focus {
+  border: solid 5px #137CB8;
+}
+
 
 .nav-tabs > li > a {
   border: none !important;

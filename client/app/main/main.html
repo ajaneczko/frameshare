@@ -2,21 +2,29 @@
 
 <header class="hero-unit" id="banner">
   <div class="container">
-    <h1>Frameshare</h1>
-    <p class="lead">Keep track on your FramerJS prototypes</p>
-    <img src="http://framermeetup.com/static/images/1024.png" alt="I'm Yeoman">
-  </div>
-  <br>
-  <div class="container syf-main-add-project">
+    <h2>HANDY TOOL TO KEEP YOUR FRAMERJS PROJECTS IN ONE PLACE</h2>
+
     <div class="row">
-      <div id="syf-main-add-project" class="col-md-2 col-md-offset-5">
-        <button type="button" class="btn btn-default" ><a href="/dashboard/new-project"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></button>
-      </div>
+      <div id="frameshare-create-project">
+        <div class="input-group create-project-input">
+          <input type="text" class="form-control" placeholder="Paste a new URL to prototype version...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">start project</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
     </div>
+
   </div>
+
+  <br>
 </header>
 
-
+<div class="container">
+  <div class="row">
+    <project_list></project_list>
+  </div>
+</div>
 
 
 

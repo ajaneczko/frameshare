@@ -1,4 +1,6 @@
-
+body {
+  padding-top: 50px;
+}
 /**
  * Bootstrap Fonts
  */
@@ -38,6 +40,6 @@
     padding: 0.2em 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, input, button {
   font-family: "factoria";
 }
