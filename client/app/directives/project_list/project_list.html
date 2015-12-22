@@ -1,41 +1,25 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
 
-<div ui-view>
-  <div class="container">
-    <div class="hero-unit-dashboard jumbotron">
-      <h1>{{currentUser}}</h1>
-      <p><a class="btn btn-primary btn-lg" href="/dashboard/new-project" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></p>
-    </div>
-  </div>
-  <br>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Your projects</h2>
-        <div ng-if="personalProjects.length == 0">
-          <p>You don't have any private projects yet</p>
-        </div>
-        <div class="panel panel-default" ng-repeat="project in personalProjects">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Public projects</h2>
+      <div class="panel panel-default" ng-repeat="project in projects" ng-show="project.isPublic">
 
           <div class="panel-heading">
-            {{personalProjects.length}}
             <a ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a> <span class="badge" ng-show="project.isPublic">Public</span><span class="badge" ng-show="!project.isPublic">Private</span>
             <small ng-if="project.author">created by {{project.author.name}}</small>
-            <div class="main-actions pull-right">
+            <div ng-show="isLoggedIn()" class="main-actions pull-right">
               <a class="edit" tooltip="Edit project"> Edit</a>
             </div>
           </div>
-
           <div class="panel-body">
-            <p>{{project.description}}</p>
-            <p>
-              <add-version data-project="project">
 
-              </add-version>
-            </p>
+            <p>{{project.description}}</p>
+            <p><add-version ng-show="isLoggedIn()" data-project="project"></add-version></p>
+
             <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
+
                 <div ng-show="isLoggedIn()" class="pull-right">
                   <a ng-href="{{version.url}}" class="prototype-verstion-item-open-prototype" tooltip="Open prototype">
                     <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
@@ -50,9 +34,9 @@
             </ul>
           </div>
 
-
-        </div>
       </div>
     </div>
   </div>
 </div>
+
+
