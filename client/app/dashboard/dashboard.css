@@ -16,20 +16,10 @@
   margin-top: 0px;
 }
 
-.prototype-versions-panel::before {
-  content: "•";
-  position: relative;
-  left: -4.7px;
-  top: 16.5px;
-  color: #AAD2AA;
-  font-size: 30px;
-
-}
-
 .prototype-version-item {
   border-top: 0 !important;
   border-right: 0 !important;
-  border-left: 1px Solid #AAD2AA !important;
+  border-left: 2px Solid #569ADF !important;
   border-bottom: 0 !important;
   border-radius: 0px !important;
 }
@@ -53,7 +43,7 @@
 }
 
 .prototype-version-item:hover {
-  background-color: rgba(170, 210, 170, 0.26)
+  background-color: rgba(185, 192, 199, 0.27);
 }
 
 .prototype-version-item-timestamp {
