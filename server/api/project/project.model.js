@@ -8,6 +8,7 @@ var ProjectSchema = new Schema({
   name: String,
   slug: String,
   description: String,
+  isPublic: Boolean,
   author: { type: Schema.Types.ObjectId, ref: 'User' },
   updated_at: {type:Date},
   prototype_version: [{

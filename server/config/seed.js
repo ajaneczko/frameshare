@@ -11,52 +11,58 @@ var Project = require('../api/project/project.model');
 
 Project.find({}).remove(function() {
   Project.create({
-    name : 'Broadsheet',
+    name : 'Project #1',
+    isPublic: true,
     description : 'Description of prototype #1',
     prototype_version: [
-      {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-      {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-      {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+      {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+      {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+      {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   }, {
-    name : 'Bungalow',
+    name : 'Project #2',
+    isPublic: true,
     description : 'Description of prototype #2',
     prototype_version: [
-          {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   }, {
-    name : 'SmartCity',
+    name : 'Project #3',
+    isPublic: false,
     description : 'Description of prototype #3',
     prototype_version: [
-          {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   },  {
-    name : 'Popps',
+    name : 'Project #4',
+    isPublic: false,
     description : 'Description of prototype #4',
     prototype_version: [
-          {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   },  {
-    name : 'SYF',
+    name : 'Project #5',
+    isPublic: true,
     description : 'Description of prototype #5',
     prototype_version: [
-          {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   },{
-    name : 'SpaceTravel',
+    name : 'Project #6',
+    isPublic: true,
     description : 'EDescription of prototype #6',
     prototype_version: [
-          {name:'Proto1',description:'Added swiping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto2',description:'Added deleting interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
-          {name:'Proto3',description:'Added striping interaction to card', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto1',description:'Description proto1', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto2',description:'Description proto2', url:'http://share.framerjs.com/mgw4je9qojsv/'},
+          {name:'Proto3',description:'Description proto3', url:'http://share.framerjs.com/mgw4je9qojsv/'},
     ],
   });
 });

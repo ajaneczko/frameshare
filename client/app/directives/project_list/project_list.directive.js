@@ -8,13 +8,13 @@ angular.module('syfApp')
       scope: {
         projects: '=',
       },
-      controller: ['$scope', '$http', function ($scope, $http) {
+      controller: ['$scope', '$http','Project','$stateParams','Auth', function ($scope, $http, Project, $stateParams) {
 
+        $scope.projects = []
 
-        $http.get('/api/projects').success(function(awesomeProjects) {
-          $scope.projects = awesomeProjects;
+        Project.query({ slug: $stateParams.slug }).$promise.then(function(projects) {
+          $scope.projects = projects;
         });
-
 
       }]
     };

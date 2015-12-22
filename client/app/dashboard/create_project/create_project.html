@@ -17,8 +17,20 @@
           <label>Description</label>
           <input type="text" name="email"  class="form-control" ng-model="projectDescription">
         </div>
+        <label>Type of project</label>
 
 
+
+
+
+        <div class="onoffswitch">
+          <input type="checkbox" ng-model="isProjectPublic" ng-change="onSwitch(isProjectPublic)" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+          <label class="onoffswitch-label" for="myonoffswitch">
+
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
 
         <div>
           <button class="btn btn-inverse btn-lg btn-login" type="submit" ng-click="addProject()">
