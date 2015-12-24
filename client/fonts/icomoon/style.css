@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?dk6z02');
+    src:    url('fonts/icomoon.eot?dk6z02#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?dk6z02') format('truetype'),
+        url('fonts/icomoon.woff?dk6z02') format('woff'),
+        url('fonts/icomoon.svg?dk6z02#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-person:before {
+    content: "\e7fd";
+}
+.icon-browser:before {
+    content: "\f0c5";
+}
+.icon-cloud-upload:before {
+    content: "\f00c";
+}
+.icon-eye:before {
+    content: "\f04e";
+}
+.icon-gist:before {
+    content: "\f00e";
+}
+.icon-git-branch:before {
+    content: "\f020";
+}
+.icon-tools:before {
+    content: "\f031";
+}
+.icon-versions:before {
+    content: "\f064";
+}
+.icon-gears:before {
+    content: "\e02b";
+}
+.icon-key:before {
+    content: "\e02c";
+}
+.icon-attachment:before {
+    content: "\e02e";
+}
+.icon-layers:before {
+    content: "\e031";
+}
+.icon-download:before {
+    content: "\e04d";
+}
+.icon-clock:before {
+    content: "\e055";
+}
+.icon-aperture:before {
+    content: "\e056";
+}
+

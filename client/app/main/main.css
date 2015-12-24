@@ -2,18 +2,20 @@
   background-image: url("/assets/images/MainViewBackground.png");
   border-bottom: none;
   margin-top: -20px;
-  height: 350px;
+  height: 380px;
 }
 
 #banner h1 {
-  font-size: 60px;
+  font-size: 30px;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -1px;
+  margin-bottom: 30px;
 }
 
 .hero-unit {
   position: relative;
-  padding: 129px 15px;
+  padding: 100px 15px;
   color: white;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
@@ -40,35 +42,47 @@
 ============================================================ */
 
 #frameshare-create-project {
-  width:70%;
+  width:85%;
   text-align: center;
   margin: 0px auto;
   margin-top: 20px;
 }
 
-.create-project-input button {
-   padding: 10px;
-    border: solid 5px #137CB8;
-    -webkit-transition: border 0.3s;
-    -moz-transition: border 0.3s;
-    -o-transition: border 0.3s;
-    transition: border 0.3s;
+#framer-create-project-button {
+    padding: 10px;
+    margin-top:40px;
+    margin-bottom: 30px;
+    border: solid 3px white;
     border-radius: 0px;
     width: 200px;
-    background-color: #137CB8;
+    background-color: transparent;
     color: white;
     text-transform: uppercase;
 }
 
-.create-project-input button:focus, .create-project-input button.focus {
-    border: solid 5px #137CB8;
-    background-color: #137CB8;
-    color: white;
+#framer-create-project-button:hover {
+  background-color: white;
+}
+
+#framer-create-project-button:hover a {
+  color:black !important;
+}
+
+#framer-create-project-button a {
+  color: white;
+  text-decoration: none;
 }
 
 #frameshare-create-project-input {
-  padding: 20px !important;
-  border: solid 5px #137CB8 !important;
+  box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  background-color: transparent !important;
+  padding: 5px !important;
+  border: 0 !important;
+  height: 50px;
+  text-align: center;
+  font-size: 28px;
+  width: 100%;
+  color: white !important;
   -webkit-transition: border 0.3s !important;
   -moz-transition: border 0.3s !important;
   -o-transition: border 0.3s !important;
@@ -76,12 +90,31 @@
   border-radius: 0px !important;
   width: 100% !important;
   text-transform: uppercase !important;
+  border-bottom: 3px Dashed #00A4CF !important;
 }
 
-.create-project-input input[type="text"]:focus, .create-project-input input[type="text"].focus {
-  border: solid 5px #137CB8;
+
+#frameshare-create-project-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #6DACD4 !important;
+  text-align: center;
+  text-weight: light;
+  text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: white;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: white;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: white;
 }
 
+.input-group-btn {
+  height: 100px;
+}
 
 .nav-tabs > li > a {
   border: none !important;

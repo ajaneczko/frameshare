@@ -12,14 +12,9 @@
   color: #D29696;
 }
 
-.prototype-versions-panel {
-  margin-top: 0px;
-}
-
 .prototype-version-item {
   border-top: 0 !important;
   border-right: 0 !important;
-  border-left: 2px Solid #569ADF !important;
   border-bottom: 0 !important;
   border-radius: 0px !important;
 }

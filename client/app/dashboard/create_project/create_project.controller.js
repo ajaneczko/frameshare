@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('syfApp')
-  .controller('CreateProjectCtrl', function ($scope, $state, Project) {
+  .controller('CreateProjectCtrl', function ($scope, $state, Project, $rootScope) {
 
+    $scope.projectURL = $rootScope.projectStartUrl;
     $scope.projectName = ''
     $scope.projectDescription = ''
     $scope.isProjectPublic = true;

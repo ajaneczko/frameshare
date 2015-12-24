@@ -6,23 +6,26 @@
     </div>
     <div class="col-sm-6">
       <form class="form" name="form">
-
         <div class="form-group">
-          <label>Name</label>
+          <label>Project name</label>
 
           <input type="text" name="name" class="form-control" ng-model="projectName">
         </div>
-
         <div class="form-group" >
           <label>Description</label>
           <input type="text" name="email"  class="form-control" ng-model="projectDescription">
         </div>
+
+        <div class="form-group">
+          <label>Initial FramerJS prototype</label>
+
+          <input type="text" name="name" class="form-control" ng-model="projectURL">
+        </div>
+
+
+
+        <hr>
         <label>Type of project</label>
-
-
-
-
-
         <div class="onoffswitch">
           <input type="checkbox" ng-model="isProjectPublic" ng-change="onSwitch(isProjectPublic)" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
           <label class="onoffswitch-label" for="myonoffswitch">
@@ -31,20 +34,21 @@
             <span class="onoffswitch-switch"></span>
           </label>
         </div>
-
+        <hr>
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit" ng-click="addProject()">
+          <p ng-if="!isProjectPublic">To create private project you need to sign up</p>
+          <button ng-if="!isProjectPublic" class="btn btn-inverse btn-lg btn-login" type="submit" >
+            <a href="/login">Login</a>
+          </button>
+          <button class="btn btn-inverse btn-lg btn-login"  ng-disabled="!isProjectPublic" type="submit" ng-click="addProject()">
             Add project
           </button>
           <a class="btn btn-default btn-lg btn-register" href="/dashboard">
             Nevermind
           </a>
         </div>
-
-        <hr>
-
       </form>
     </div>
   </div>
-  <hr>
+
 </div>

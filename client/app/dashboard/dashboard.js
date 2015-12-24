@@ -12,8 +12,7 @@ angular.module('syfApp')
       .state('dashboard-new-project', {
         url: '/dashboard/new-project',
         templateUrl: 'app/dashboard/create_project/create_project.html',
-        controller: 'CreateProjectCtrl',
-        authenticate: true
+        controller: 'CreateProjectCtrl'
       })
       .state('dashboard.project', {
         url: '/project/:slug',
