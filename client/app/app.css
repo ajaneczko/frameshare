@@ -20,7 +20,7 @@ body {
 
 @font-face {
     font-family: 'FontAwesome';
-    src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0');
+    src: url('../fonts/iconmoon/iconmoon.eot');
     src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
     url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
     url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
@@ -30,6 +30,21 @@ body {
 }
 
 /**
+ *Iconmoon Fonts
+ */
+
+@font-face {
+      font-family: 'icomoon';
+      src:url('../fonts/icomoon/fonts/icomoon.eot');
+      src:url('../fonts/icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon/fonts/icomoon.woff') format('woff'),
+          url('../fonts/icomoon/fonts/icomoon.ttf') format('truetype'),
+          url('../fonts/icomoon/fonts/icomoon.svg#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+ }
+/**
+
  * App-wide Styles
  */
 
@@ -40,6 +55,12 @@ body {
     padding: 0.2em 0;
 }
 
-h1, h2, h3, input, button {
-  font-family: "factoria";
+body {
+  font-family: "nimbus-sans";
 }
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+

@@ -1,8 +1,46 @@
+.frameshare-project-list-wrapper  {
+
+}
+
+.prototype-versions-panel {
+  margin-top: 0px;
+}
+
+.list-group-item:first-child {
+  font-size: 100%;
+
+}
+
+.list-group-item:first-child:before {
+
+  font-family: icomoon;
+  content: "\f020  HEAD";
+  font-size: 80%;
+  color: #D8D8D8;
+}
+
 .framshare-project-title {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #4E94E1;
-  text-decoration: none;
+  font-weight: 700;
   margin: 0px 0px 0px 0px;
+}
+
+.framshare-project-title a {
+  text-decoration: none !important;
+}
+
+.framshare-project-title:hover {
+  text-decoration: none !important;
+}
+
+.frameshare-project-list-header {
+  background-color: white !important;
+  border-bottom: 0px;
+}
+
+.framshare-last-update {
+
 }
 
 .frameshare-project-description {
@@ -10,6 +48,14 @@
   font-size: 1.2em;
   color: #555;
   font-weight: 400;
+}
+
+.framshare-project-timeline-version {
+  padding-right: 30px;
+  padding-top: 40px;
+  margin-left: -27.5px;
+  font-size: 200%;
+  color: #569ADF !important;
 }
 
 .frameshare-project-list-proto-version {

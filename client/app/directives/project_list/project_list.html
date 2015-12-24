@@ -1,7 +1,8 @@
 
 <div id="frameshare-project-list" class="col-md-12">
-  <div class="panel panel-default" ng-repeat="project in projects" ng-show="project.isPublic">
-      <div class="panel-heading">
+  <div class="frameshare-project-list-wrapper panel panel-default" ng-repeat="project in projects" ng-show="project.isPublic">
+      <div class="frameshare-project-list-header panel-heading">
+        <p class="prototype-version-item-timestamp"><span class="icon-clock"></span> Updated <span  am-time-ago="project.updated_at"></span></p>
         <a class="framshare-project-title" ui-sref="dashboard.project({ slug: project.slug })" class="panel-title">{{project.name}} </a>
         <small ng-if="project.author">created by {{project.author.name}}</small>
         <p class="frameshare-project-description">{{project.description}}</p>
@@ -20,9 +21,8 @@
                 Open prototype
               </a>
             </div>
-            <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
             <p class="prototype-version-item-name">{{version.name}}</p>
-            <p class="prototype-version-item-url framshare-project-list-url"><a>{{version.url}}</a></p>
+
           </li>
         </ul>
       </div>

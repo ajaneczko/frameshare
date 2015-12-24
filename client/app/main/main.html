@@ -2,15 +2,20 @@
 
 <header class="hero-unit" id="banner">
   <div class="container">
-    <h2>HANDY TOOL TO KEEP YOUR FRAMERJS PROJECTS IN ONE PLACE</h2>
+    <!--<h2>HANDY TOOL TO KEEP YOUR FRAMERJS PROJECTS IN ONE PLACE</h2><!-->
 
     <div class="row">
       <div id="frameshare-create-project">
+        <h1>Handy tool to improve your prototyping experience with FramerJS</h1>
         <div class="input-group create-project-input">
-          <input id="frameshare-create-project-input" type="text" class="form-control" placeholder="Paste a new URL to prototype version...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">start project</button>
-          </span>
+          <div class="col-md-12">
+            <input autofocus id="frameshare-create-project-input" type="text" class="form-control" ng-model="projectUrl" placeholder="Paste FramerJS prototype here">
+          </div>
+          <div class="col-md-12">
+            <span class="input-group-btn">
+              <button id="framer-create-project-button" class="btn btn-default" type="button"><a href="/dashboard/new-project" ng-click="passUrl()"><span class="icon-cloud-upload"></span> start project</a></button>
+            </span>
+          </div>
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
     </div>

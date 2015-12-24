@@ -7,6 +7,7 @@ angular.module('syfApp')
       restrict: 'AE',
       scope: {
         projects: '=',
+
       },
       controller: ['$scope', '$http','Project','$stateParams','Auth', function ($scope, $http, Project, $stateParams) {
 
