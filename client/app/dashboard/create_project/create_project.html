@@ -36,11 +36,11 @@
         </div>
         <hr>
         <div>
-          <p ng-if="!isProjectPublic">To create private project you need to sign up</p>
-          <button ng-if="!isProjectPublic" class="btn btn-inverse btn-lg btn-login" type="submit" >
+          <p ng-if="!isProjectPublic && !isLoggedIn">To create private project you need to sign up</p>
+          <button ng-if="!isProjectPublic && !isLoggedIn" class="btn btn-inverse btn-lg btn-login" type="submit" >
             <a href="/login">Login</a>
           </button>
-          <button class="btn btn-inverse btn-lg btn-login"  ng-disabled="!isProjectPublic" type="submit" ng-click="addProject()">
+          <button class="btn btn-inverse btn-lg btn-login"  ng-disabled="!isProjectPublic && !isLoggedIn" type="submit" ng-click="addProject()">
             Add project
           </button>
           <a class="btn btn-default btn-lg btn-register" href="/dashboard">

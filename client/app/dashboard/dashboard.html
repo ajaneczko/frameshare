@@ -1,11 +1,24 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div ui-view>
-  <div class="container">
-    <div class="hero-unit-dashboard jumbotron">
-      <h1>{{currentUser}}</h1>
-      <p><a class="btn btn-primary btn-lg" href="/dashboard/new-project" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></p>
+
+  <div id="frameshare-dashboard-hero-unit" class=" jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 frameshare-dashboard-avatar">
+          <div>
+            <span class="icon-person"></span>
+          </div>
+        </div>
+        <div class="col-md-8 frameshare-dashboard-profile-info">
+          <h1>{{currentUser}}</h1>
+          <p><a class="btn btn-primary btn-lg" href="/dashboard/new-project" role="button">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create new project</a></p>
+        </div>
+      </div>
     </div>
+
+
   </div>
   <br>
 
