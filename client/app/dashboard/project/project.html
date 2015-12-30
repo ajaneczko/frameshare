@@ -1,27 +1,45 @@
+<div id="frameshare-dashboard-hero-unit" class=" jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 frameshare-dashboard-project-badge">
+        <div>
+          <span class="icon-versions"></span>
+        </div>
+      </div>
+      <div class="col-md-8 frameshare-dashboard-profile-info">
+        <h1>{{project.name}}</h1>
+        <p>{{project.description}}</p>
+        <small ng-if="project.author">created by {{project.author.name}} </small>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-
-                    <span class="panel-title">{{project.name}} </span>
-                    <small ng-if="project.author">created by {{project.author.name}} </small>
-                    <div class="main-actions pull-right">
-                        <a class="edit" tooltip="Edit project"> Edit</a>
-                    </div>
+                    <span class="panel-title">Versions</span>
                 </div>
                 <div class="panel-body">
-                    {{project.description}}
-
-                    <div ng-repeat="version in project.prototype_version | orderBy:'-created_at' | limitTo: 1">
-                        <p class="prototype-version-item-name">{{version.name}}</p>
-                        <p class="prototype-version-item-description">{{version.description}}</p>
-                        <p class="prototype-version-item-timestamp">{{version.created_at | date:'short'}}</p>
-
-                        <a ng-href="{{ version.url }}">
-                            <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span> Open
+                  <div ng-if="project.prototype_version.length == 0">
+                    <p>No versions created yet 💤</p>
+                  </div>
+                  <ul class="list-group prototype-versions-panel">
+                    <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
+                      <div class="pull-right">
+                        <a ng-href="{{version.url}}" class="prototype-verstion-item-open-prototype" tooltip="Open prototype">
+                          <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                          Open prototype
                         </a>
-                    </div>
+                      </div>
+                      <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
+                      <p class="prototype-version-item-name">{{version.name}}</p>
+                      <p class="prototype-version-item-url"><code>{{version.url}}</code></p>
+                    </li>
+                  </ul>
                 </div>
             </div>
         </div>
