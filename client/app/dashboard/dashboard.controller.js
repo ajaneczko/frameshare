@@ -27,7 +27,6 @@ angular.module('syfApp')
     $http.get('/api/projects').success(function(awesomeProjects) {
       $scope.awesomeProjects = awesomeProjects;
       $scope.isLoggedIn = Auth.isLoggedIn;
-      console.log($scope.awesomeProjects)
       socket.syncUpdates('project', $scope.awesomeProjects);
     });
 

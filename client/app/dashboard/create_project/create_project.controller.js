@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('syfApp')
-  .controller('CreateProjectCtrl', function ($scope, $state, Project, $rootScope) {
+  .controller('CreateProjectCtrl', function ($scope, $state, Project, Auth, $rootScope) {
 
     $scope.projectURL = $rootScope.projectStartUrl;
     $scope.projectName = ''
+    $scope.isLoggedIn = Auth.isLoggedIn()
+
     $scope.projectDescription = ''
     $scope.isProjectPublic = true;
     $scope.versionName = 'First version of prototype'
@@ -24,7 +26,7 @@ angular.module('syfApp')
 
       $scope.newVersion = {name: 'First version of prototype', url: $scope.projectURL, description: ''};
       $scope.allLinks.push($scope.newVersion)
-      
+
       Project
           .save({ name: $scope.projectName, description: $scope.projectDescription, isPublic: $scope.isProjectPublic, prototype_version: $scope.allLinks})
           .$promise
