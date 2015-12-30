@@ -1,5 +1,16 @@
-.hero-unit-dashboard {
-  margin-top: 30px;
+#frameshare-dashboard-hero-unit {
+
+}
+
+.frameshare-dashboard-avatar {
+    font-size: 100px;
+     margin: 0px auto;
+    text-align: center;
+}
+
+.frameshare-dashboard-profile-info h1 {
+  font-size: 40px;
+
 }
 
 .edit {
