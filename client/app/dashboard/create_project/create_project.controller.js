@@ -7,21 +7,30 @@ angular.module('syfApp')
     $scope.projectName = ''
     $scope.projectDescription = ''
     $scope.isProjectPublic = true;
-
+    $scope.versionName = 'First version of prototype'
+     $scope.allLinks = []
     $scope.onSwitch = function (isProjectPublic) {
       $scope.isProjectPublic != $scope.isProjectPublic;
     }
 
     $scope.addProject = function() {
       if($scope.projectName === '') {
-      return;
+        return;
       }
 
+      if( $scope.projectURL === '') {
+        return;
+      }
+
+      $scope.newVersion = {name: 'First version of prototype', url: $scope.projectURL, description: ''};
+      $scope.allLinks.push($scope.newVersion)
+      
       Project
-          .save({ name: $scope.projectName, description: $scope.projectDescription, isPublic: $scope.isProjectPublic  })
+          .save({ name: $scope.projectName, description: $scope.projectDescription, isPublic: $scope.isProjectPublic, prototype_version: $scope.allLinks})
           .$promise
           .then(function () {
             $state.go('dashboard')
+            console.log($scope.newVersion)
           })
       $scope.projectName = '';
 

@@ -33,6 +33,9 @@
 
               </add-version>
             </p>
+            <div ng-if="project.prototype_version.length == 0">
+              <p>No versions created yet 💤</p>
+            </div>
             <ul class="list-group prototype-versions-panel">
               <li class="list-group-item prototype-version-item" ng-repeat="version in project.prototype_version | orderBy:'-created_at'">
                 <div ng-show="isLoggedIn()" class="pull-right">
@@ -41,7 +44,9 @@
                     Open prototype
                   </a>
                 </div>
+
                 <p class="prototype-version-item-timestamp" am-time-ago="version.created_at"></p>
+
                 <p class="prototype-version-item-name">{{version.name}}</p>
                 <p class="prototype-version-item-url"><code>{{version.url}}</code></p>
               </li>
