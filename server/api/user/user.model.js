@@ -13,7 +13,7 @@ var UserSchema = new Schema({
     default: 'user'
   },
   hashedPassword: { type: String, select: false },
-  provider: { type: String, select: false },
+  provider: String,
   salt: { type: String, select: false },
   facebook: { select: false },
   twitter: { select: false },
