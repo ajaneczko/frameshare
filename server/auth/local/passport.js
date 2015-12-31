@@ -7,9 +7,13 @@ exports.setup = function (User, config) {
       passwordField: 'password' // this is the virtual field on the model
     },
     function(email, password, done) {
-      User.findOne({
+      var criteria = {
         email: email.toLowerCase()
-      }, function(err, user) {
+      };
+
+      var projection = '+salt +hashedPassword';
+
+      User.findOne(criteria, projection, function(err, user) {
         if (err) return done(err);
 
         if (!user) {
