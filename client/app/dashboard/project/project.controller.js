@@ -18,12 +18,6 @@ angular.module('syfApp')
         $scope.projectId = $scope.project._id;
       });
 
-      $scope.showZdupis = function(nazwa) {
-        console.log(nazwa)
-      }
-
-
-
       $scope.isEdit = false
       $scope.showEditInput = false
 
