@@ -93,6 +93,9 @@
   border-bottom: 3px Dashed #00A4CF !important;
 }
 
+.create-project-input {
+  width: 100%;
+}
 
 #frameshare-create-project-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: #6DACD4 !important;
@@ -140,8 +143,8 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  #frameshare-create-project {
+@media (max-width: 480px) {
+  .create-project-input {
     display: none;
   }
 }
