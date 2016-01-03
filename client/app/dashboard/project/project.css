@@ -1,9 +1,69 @@
 .frameshare-dashboard-project-badge {
-    font-size: 100px;
-     margin: 0px auto;
-    text-align: center;
+  font-size: 100px;
+   margin: 0px auto;
+  text-align: center;
+}
+
+#frameshare-project-title {
+  width: auto;
+  display:inline-block;
+}
+
+#frameshare-project-title:hover {
+   background-color: rgba(52, 152, 219, 0.13);
+   cursor:pointer;
+}
+
+#frameshare-project-description {
+
 }
 
 .frameshare-dashboard-project-info h1 {
   font-size: 40px;
+}
+
+.frameshare-dashboard-project-info h1 {
+  background-color: green !important;
+
+}
+
+.frameshare-edit-project-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.frameshare-edit-project-title input {
+  box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  background-color: rgba(52, 152, 219, 0.13) !important;
+
+  border: 0 !important;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  -webkit-transition: border 0.3s !important;
+  -moz-transition: border 0.3s !important;
+  -o-transition: border 0.3s !important;
+  transition: border 0.3s !important;
+  border-radius: 0px !important;
+  width: auto;
+  color: #999;
+
+}
+
+.frameshare-edit-project-title button {
+  height: 46px;
+  background-color:  #00A4CF;
+  border: 1px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.frameshare-project-title-edit-icon {
+  font-size: 50%;
+}
+
+.frameshare-project-title-edit-icon:hover {
+  cursor: pointer;
 }
