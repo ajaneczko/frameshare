@@ -23,9 +23,27 @@ s.setAttribute('data-timestamp', +new Date());
           <span class="icon-versions"></span>
         </div>
       </div>
+
       <div class="col-md-8 frameshare-dashboard-profile-info">
-        <h1>{{project.name}}</h1>
-        <p>{{project.description}}</p>
+
+        <div ng-if="!showEditInput">
+          <h1 id="frameshare-project-title" ng-click="startEditing()">{{project.name}}
+            <span ng-if="isEdit" class="glyphicon glyphicon-pencil frameshare-project-title-edit-icon" ng-click="startEditing()" aria-hidden="true">
+            </span>
+          </h1>
+        </div>
+
+        <div class="frameshare-edit-project-title" ng-if="showEditInput">
+          <input type="text" ng-model="newTitle">
+          <button ng-click="updateTitle(newTitle); startEditing()">Save</button>
+          <button ng-click="startEditing()">Cancel</button>
+          <hr>
+        </div>
+
+
+        <div>
+          <p id="frameshare-project-description" >{{project.description}}</p>
+        </div>
         <small ng-if="project.author">created by {{project.author.name}} </small>
 
       </div>
