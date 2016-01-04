@@ -27,24 +27,29 @@ s.setAttribute('data-timestamp', +new Date());
       <div class="col-md-8 frameshare-dashboard-profile-info">
 
         <div ng-if="!showEditInput">
-          <h1 id="frameshare-project-title" ng-click="startEditing()">{{project.name}}
+          <h1 ng-click="startEditing()" ng-class="{'frameshare-project-title-isAuthor': isUserAuthor}">{{project.name}}
             <span ng-if="isEdit" class="glyphicon glyphicon-pencil frameshare-project-title-edit-icon" ng-click="startEditing()" aria-hidden="true">
             </span>
           </h1>
         </div>
 
-        <div class="frameshare-edit-project-title" ng-if="showEditInput">
-          <input type="text" ng-model="newTitle">
-          <button ng-click="updateTitle(newTitle); startEditing()">Save</button>
-          <button ng-click="startEditing()">Cancel</button>
-          <hr>
+        <div class="row" ng-if="showEditInput">
+          <div class="col-lg-8">
+            <div class="input-group frameshare-edit-project-title ">
+
+              <input type="text" class="form-control" placeholder="Type name of the project" ng-model="newTitle">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="updateTitle(newTitle); startEditing()">Change name</button>
+                <button class="btn btn-default" type="button" ng-click="startEditing()">Nevermind</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
         </div>
 
 
-        <div>
           <p id="frameshare-project-description" >{{project.description}}</p>
-        </div>
-        <small ng-if="project.author">created by {{project.author.name}} </small>
+
+        <small ng-if="project.author && isUserAuthor">created by {{project.author.name}} </small>
 
       </div>
     </div>
